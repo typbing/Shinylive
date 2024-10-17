@@ -1,8 +1,5 @@
 library(shiny);library(leaflet);library(sf);library(dplyr)
 
-setwd('/Users/binghui/Desktop/2024 Fall/Web Mapping/Shinylive')
-getwd()
-
 points_data <- st_read("cbsa_points.shp") 
 
 tf_data = st_transform(points_data, crs = '+proj=longlat +datum=WGS84')
@@ -80,5 +77,4 @@ server <- function(input, output) {
 
 
 shinyApp(ui, server)
-
 
